@@ -1,3 +1,5 @@
+use blib;
+use strict;
 use autobox::List::Util;
 use Test::More tests => 19;
 

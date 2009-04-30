@@ -1,3 +1,4 @@
+use blib;
 use Test::More tests => 6;
 
 use strict;
