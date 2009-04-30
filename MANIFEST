@@ -2,7 +2,7 @@ Build.PL
 Changes
 lib/autobox/List/Util.pm
 MANIFEST
-MANIFEST.skip
+MANIFEST.SKIP
 README
 t/00-load.t
 t/first.t
