@@ -77,7 +77,7 @@ autobox::List::Util - bring the List::Util functions to autobox
 
 =head1 VERSION
 
-Version 20090429
+Version 20090629
 
 =cut
 
