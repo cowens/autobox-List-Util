@@ -59,7 +59,8 @@ sub reduce {
 sub shuffle {
 	load List::Util;
 	my $self = shift;
-	return List::Util::shuffle @$self
+	return List::Util::shuffle @$self if wantarray;
+	return [ List::Util::shuffle @$self ];
 }
 
 sub sum {
@@ -80,7 +81,7 @@ Version 20090429
 
 =cut
 
-our $VERSION = '20090429';
+our $VERSION = '20090629';
 
 =head1 SYNOPSIS
 
@@ -120,7 +121,12 @@ This method behaves nearly the same as the reduce function from List::Util,
 but it takes a coderef not a block for the same reason.  It also has a bug
 (see L<BUGS>)
 
-=head2 max, maxstr, min, minstr, shuffle, sum
+=head2 shuffle
+
+If called in scalar context it returns a reference to an array instead
+of a list.  This allows shuffle to be chained with other calls.
+
+=head2 max, maxstr, min, minstr, sum
 
 These methods behave exactly the same as their List::Util counterparts.
 
